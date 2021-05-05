@@ -1,7 +1,13 @@
+#!/usr/bin/env sh
+
+# остановить публикацию при ошибках
+set -e
+
+# сборка
 npm run build
 
 # переход в каталог сборки
-cd hello-world
+cd dist
 
 # если вы публикуете на пользовательский домен
 # echo 'www.example.com' > CNAME
@@ -10,6 +16,9 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:Weenty/impromptu-social-network.git master:gh-pages
-cd hello-world
+
+git push -f git@github.com:Weentry/Weentry.github.io.git master
+
+
+
 cd -
